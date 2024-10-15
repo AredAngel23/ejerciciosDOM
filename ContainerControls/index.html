@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizar Div</title>
+    <style>
+        /* Centrar el div en la pantalla */
+        #miDiv {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #ccc;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrar los inputs horizontalmente */
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    
+	<div id="miDiv">
+        <div class="container">
+            Ancho:<input type="range" id="width" min="300" max="1300">
+		    Alto:<input type="range" id="heigth" min="300" max="500">
+		    Redondeado:<input type="range" id="borderRadius" min="" max="">
+		    Sombra:<input type="range" id="sombra" min="100" max="500">
+        </div>
+	</div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

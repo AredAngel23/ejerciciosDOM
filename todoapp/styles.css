@@ -1,0 +1,23 @@
+.alert {
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.red {
+    border: 2px solid red;
+    background-color: rgb(240, 165, 165);
+}
+
+.yellow {
+    border: 2px solid rgb(246, 246, 21);
+    background-color: rgb(243, 243, 173);
+}
+
+.green {
+    border: 2px solid green;
+    background-color: rgb(123, 241, 190);
+}
