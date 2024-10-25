@@ -22,6 +22,22 @@
             border: 3px solid #00e69d;
             box-shadow: 0px 0px 10px 10px #00e69d90;
         }
+        .boton-regreso {
+        background-color: #00e69d90; 
+        color: ghostwhite;
+        border: none;
+        border-radius: 5px; 
+        padding: 10px 20px; 
+        font-size: 16px; 
+        font-weight: bold;
+        cursor: pointer; 
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        }
+        .boton-regreso:hover {
+        background-color: #00e69d;
+        }
     </style>
 </head>
 <body>
@@ -29,6 +45,7 @@
         <h1>Bolita que rebota</h1>
         <canvas id="lienzo" width="600" height="400"></canvas>
     </div>
+    <a href="../index.html" class="boton-regreso">Regresar</a>
     <script src="./app.js"></script>
 </body>
 </html>

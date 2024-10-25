@@ -26,7 +26,22 @@
             align-items: center; /* Centrar los inputs horizontalmente */
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
-
+        .boton-regreso {
+        background-color: #00e69d90; 
+        color: ghostwhite;
+        border: none;
+        border-radius: 5px; 
+        padding: 10px 20px; 
+        font-size: 16px; 
+        font-weight: bold;
+        cursor: pointer; 
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        }
+        .boton-regreso:hover {
+        background-color: #00e69d;
+        }
     </style>
 </head>
 <body>
@@ -39,7 +54,7 @@
 		    Sombra:<input type="range" id="sombra" min="0" max="500">
         </div>
 	</div>
-
+    <a href="../index.html" class="boton-regreso">Regresar</a>
     <script src="./app.js"></script>
 </body>
 </html>
