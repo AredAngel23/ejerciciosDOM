@@ -1,38 +1,33 @@
 const lienzo = document.querySelector('#lienzo');
 const ctx = lienzo.getContext('2d');
 
-const ball = {
-    x: 0,
-    y: 0,
-    show: function(){
-        ctx.fillStyle = 'orange';
-        ctx.beginPath();
-        // ctx.fillStyle = `hsl(${10},50%,50%)`;
-        ctx.arc(this.x, this.y, 20, 0, Math.PI * 2);
-        ctx.fill();
-    }
-}
-
-let x = 10;
-let y = 10;
+let x = 5;
+let y = 5;
 let right = true;
 let down = true;
 
+function ball(x,y){
+    // ctx.fillStyle = 'orange';
+    ctx.fillStyle = `hsl(${valHs1++},55%,55%)`;
+    ctx.beginPath();
+    ctx.arc(x, y, 45, 0, Math.PI * 2);
+    ctx.fill();
+}
+
+let valHs1 = 0;
 setInterval(() => {
-    ctx.clearRect(0, 0, 600, 400);
-    ball.x = x;
-    ball.y = y;
-    ball.show();
+    // ctx.clearRect(0, 0, 650, 400);
+    ball(x, y);
     // Validar right para x
-    if(right) x += 2;
-    else x -= 2;
+    if(right) x += 5;
+    else x -= 5;
     // Validar down para y 
-    if(down) y++;
-    else y--;
+    if(down) y+=5;
+    else y-=5;
     // Validar x para cambiar right
     right = x > 600? !right: right;
-    right = x < 1? !right: right;
+    right = x < 5? !right: right;
     // Validar y para cambiar down
-    down = x > 400? !down: down;
-    down = x < 1? !down: down;
-}, 0);
+    down = y > 350? !down: down;
+    down = y < 5? !down: down;
+}, 15);

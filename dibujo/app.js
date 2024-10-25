@@ -84,7 +84,7 @@ ctx.fillStyle = 'green';
 ctx.fillRect(255, 83, 70, 35);
 ctx.fillRect(268, 70, 45, 30);
 
-// Telarañas (Líneas)
+/* Telarañas (Líneas)
 ctx.strokeStyle = 'grey';
 ctx.beginPath();
 ctx.moveTo(70, 0);
@@ -101,3 +101,4 @@ ctx.lineTo(0, 115);
 
 ctx.lineWidth = 3;
 ctx.stroke();
+*/

@@ -1,24 +1,25 @@
 // Obtener las referencias a los elementos del DOM
 const div = document.getElementById('miDiv');
 const inputWidth = document.getElementById('width');
-const inputHeigth = document.getElementById('heigth');
+const inputHeight = document.getElementById('height');
 const inputBorderRadius = document.getElementById('borderRadius');
 const inputSombra = document.getElementById('sombra');
 
-inputWidth.value = div.style.width;
-inputHeigth.value = Number.parseInt(div.style.height);
+// Asignar los valores iniciales del div a los inputs
+inputWidth.value = getComputedStyle(div).width.replace('px', '');
+inputHeight.value = getComputedStyle(div).height.replace('px', '');
 
 // Función para cambiar el estilo del div
 function cambiarDiv() {
     div.style.width = inputWidth.value + 'px';
-    div.style.height = inputHeigth.value + 'px';
+    div.style.height = inputHeight.value + 'px';
     div.style.borderRadius = inputBorderRadius.value + 'px';
 };
 
 // Hacer los cambios en los inputs
 inputWidth.addEventListener('input', cambiarDiv);
-inputHeigth.addEventListener('input', cambiarDiv);
-inputBorderRadius.addEventListener('input', cambiarDiv);s
+inputHeight.addEventListener('input', cambiarDiv);
+inputBorderRadius.addEventListener('input', cambiarDiv);
 
 // Función para agregar sombra en el div y aplicarlo a su input
 inputSombra.addEventListener('input', function() {
