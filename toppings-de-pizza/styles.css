@@ -1,38 +1,38 @@
 /* Estilos generales*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Quitar los margenes de la pagina que vienen por defecto */
+    padding: 0; /* Quitar los espacios de los lados que vienen por defecto en el navegador */
+    box-sizing: border-box; /* El ancho y el alto de un elemento incluyen el contenido, el relleno (padding) y el borde (border)*/
     font-family: 'Lato', sans-serif;
 }
 
 body {
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
-    background: url(./images/pizza.jpg) no-repeat center center/cover;
+    background: url(./images/pizza.jpg) no-repeat center center/cover; /* Agregar una imagen de fondo y centrar el fondo incluso cuando se redimensione la pagina*/
 }
 
 /* Contenido */
 
-#contenedor {
+#contenedor { /* Los id se seleccionan con el hash #  */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap; /*Propiedad para que todo se reajuste de acuerdo a cuanto espacio esta disponible */
+    justify-content: center; 
     align-items: center;
-    min-height: 80vh;
+    min-height: 80vh; /*Altura minima del contenedor respecto a la ventana*/
     width: 80vh;
-    max-width: 600px;
+    max-width: 600px; /*Se define el ancho maximo para que no se distorsione en pantallas muy anchas*/
     background-color: ghostwhite;
     border: 4px solid #aa5822;
 }
 
 h1 {
     font-size: 3rem;
-    width: 100%;
-    margin: 20px 10px;
+    width: 100%; /*Toma el 100% del ancho del contenedor*/
+    margin: 20px 10px; /*Margen arriba-abajo y a los lados*/
 }
 
 ul {
