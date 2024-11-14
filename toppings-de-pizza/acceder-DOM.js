@@ -5,24 +5,22 @@ const contenedor = document.getElementById("contenedor");
 const titulo = document.getElementById('titulo');
 // innerHTML es una propiedad que nos da acceso al contenido html dentro del elemento accedido
 // typeof para mostrar el tipo de dato
-console.log(typeof contenedor.innerHTML);
+console.log(contenedor.innerHTML);
 console.log(titulo.innerText);
 console.log(titulo.tagName); // Propiedad para implementar lógica en base al tipo de etiqueta HTML
-console.log(typeof titulo); // Los métodos para obtener elementos del DOM retornan estos como objetos 
+console.log(typeof titulo); // Retorna un objeto 
 
-// Seleccionar los elementos por clases, se pueden seleccionar varios elementos de la misma clase
+// Seleccionar los elementos por clase, se pueden seleccionar varios elementos de la misma clase
 const toppings = document.getElementsByClassName('topping');
 console.log(toppings); // Retorna una HTMLCollection
 console.log(toppings[2]); // Para acceder a un elemento unicamente, hay que indicar el indice 
 
 // Seleccionar los elementos por etiqueta html, similar a seleccionar elementnos por clase, aplica para una busqueda general
 const misToppingsLi = document.getElementsByTagName('li');
-console.log(misToppingsLi); // Retorna una HTMLCollection 
+console.log(misToppingsLi.length); // Retorna una HTMLCollection 
 
-//
 // Limitación: Los métodos getElementsBy... devuelven un HTMLCollection, 
 // que no es un arreglo real y no permite métodos de arreglo como forEach sin convertirlo primero.
-//
 
 // Seleccionar el primer elemento que cumpla el criterio, del argumento enviado como un selector CSS
 const primerToppingNoMarron = document.querySelector('ul li:not(.fondo-marron)'); 
@@ -32,4 +30,4 @@ console.log(primerToppingNoMarron);
 // Seleccionar los elementos que cumpla el criterio, del argumento enviado como un selector CSS
 const toppingsNaranja = document.querySelectorAll('.topping.fondo-naranja');
 // Nos retorna una Lista de Nodos (NodeList), esta lista se considera un objeto 
-console.log(toppingsNaranja.length); 
+console.log(toppingsNaranja); 
